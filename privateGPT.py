@@ -36,7 +36,6 @@ def main():
     match model_type:
         case "OpenAI":
             llm = AzureOpenAI(model_name="text-davinci-003",  deployment_name="text-davinci-003")
-            print(llm("hi"))
         case "LlamaCpp":
             llm = LlamaCpp(model_path=model_path, n_ctx=model_n_ctx, n_batch=model_n_batch, callbacks=callbacks, verbose=False)
         case "GPT4All":
